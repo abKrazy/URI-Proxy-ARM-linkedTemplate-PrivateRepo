@@ -26,7 +26,8 @@ Note:
 
 3. **IMPORTANT**
 
-Set CORS policy (Function app blade in portal -> CORS under the API section)
+Set CORS policy (*Function app blade in portal -> CORS under the API section*)
+
 Allowed Origins: *
 
 This will allow the function API to be called from the browser in cross-origin request scenarios (e.g. Deploy to Azure button invoking the function URI from the porta.azure.com domain)
