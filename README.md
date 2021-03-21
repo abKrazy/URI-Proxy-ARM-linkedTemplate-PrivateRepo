@@ -42,7 +42,8 @@ As a result, ARM templates cannot reference artifacts located in a private GitHu
 
 
 - For private GitHub repos, PAT token must be provided as Authorization header.
-- GitHub also requires this additonal header for specifying the media type: “Accept”: “application/vnd.github.VERSION.raw”
+- GitHub also requires this additonal header for specifying the media type:
+“Accept”: “application/vnd.github.VERSION.raw”
 
 
 ## Solution:
