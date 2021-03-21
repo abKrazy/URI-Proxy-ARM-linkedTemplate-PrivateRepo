@@ -70,7 +70,8 @@ A "low-code" approach in lieu of a function app would be to use a Logic App that
 2. **Setup a private GitHub repo with the sample linked templates located in the *ARMLinkedTemplate-sample* folder, and follow the instructions in that folder's README to provide your function app URI in the ARM template.**
 
 
-Note: 
 
-Each folder has its own README.md with instructions to deploy and test the solution.
+### **NOTE:**
+
+**Each folder has its own README.md with instructions to deploy and test the solution.**
 
