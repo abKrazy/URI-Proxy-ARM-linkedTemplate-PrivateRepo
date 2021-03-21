@@ -1,0 +1,1 @@
+# ws-uri-proxy-arm-linked-tempate
