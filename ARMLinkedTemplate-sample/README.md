@@ -1,6 +1,6 @@
 This is an example of an ARM linked template that provisions an App Service plan, App Service, and a storage account.
 
-The storage account definition is stored in its own template (linkedStorageAccount.json), and is linked from the main template (azuredeploy.json)
+The storage account definition is stored in its own template (*linkedStorageAccount.json*), and is linked from the main template (*azuredeploy.json*)
 
 
 # Instructions:
@@ -8,7 +8,7 @@ The storage account definition is stored in its own template (linkedStorageAccou
 1. Store the 2 ARM templates in a private GitHub repository.
 2. Create a GitHub PAT (Personal Access Token)
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
-3. In azuredeploy.json, replace the following placeholders (<>):
+3. In *azuredeploy.json*, replace the following placeholders (<>):
 
 ```
 "privateRepoProxyUri" :{
@@ -33,6 +33,8 @@ https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-a
 
 Bonus:
 Add a ' Deploy to Azure' button to your README.md making sure to replace the placeholder (<>) values:
+
+https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-azure-button
 
 ![Deploy to Azure](https://aka.ms/deploytoazurebutton)
 

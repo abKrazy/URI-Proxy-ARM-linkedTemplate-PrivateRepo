@@ -64,8 +64,9 @@ A "low-code" approach in lieu of a function app would be to use a Logic App that
 
 
 # To get started:
-1. Setup a private GitHub repo with the sample linked templates located in the ARMLinkedTemplate-sample folder.
-2. Deploy a function app proxy - sample code in the function-app folder. Alternatively, go "low-code" with a logic app using the sample in the logic-app folder.
+1. **Deploy a function app proxy - sample code in the function-app folder. Alternatively, go "low-code" with a logic app using the sample in the *logic-app* folder.**
+2. **Setup a private GitHub repo with the sample linked templates located in the *ARMLinkedTemplate-sample* folder, and follow the instructions in that folder's README to provide your function app URI in the ARM template.**
+
 
 Note: 
 
