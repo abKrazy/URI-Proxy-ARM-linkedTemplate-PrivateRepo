@@ -1,10 +1,10 @@
 
-1. Provision a function app targeting .NET runtime.
+1. **Provision a function app targeting .NET runtime.**
 
 https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp
 
 
-2. Replace contents of the default .cs file with the code in the *PrivateRepoARMLinkedTemplateProxy.cs* file.
+2. **Replace contents of the default .cs file with the code in the *PrivateRepoARMLinkedTemplateProxy.cs* file.**
 
 This function app lets you access an ARM linked template located in a private GitHub repo. 
 
@@ -24,7 +24,7 @@ Note:
 <AzureFunctionsVersion>v3</AzureFunctionsVersion>
 ```
 
-3. Test with your ARM linked template located in a private GitHub repo
+3. **Test with your ARM linked template located in a private GitHub repo**
 
 
 url format:

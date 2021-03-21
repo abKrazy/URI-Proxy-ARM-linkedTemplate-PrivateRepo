@@ -2,10 +2,11 @@ This logic app lets you access an ARM linked template located in a private GitHu
 It uses Managed Identity to retrieve a GitHub PAT (Personal Access Token) from a Key Vault and passes it in the Authorization header.
 
 Steps:
-1. Create a GitHub PAT if you do not have one already
+1. **Create a GitHub PAT if you do not have one already**
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 
-2. Provision a Key Vault in your Azure subscription and create a secret for your GitHub PAT token. 
+2. **Provision a Key Vault in your Azure subscription and create a secret for your GitHub PAT token.**
+
 https://docs.microsoft.com/en-us/azure/key-vault/general/quick-create-portal
 
 e.g.
@@ -14,7 +15,7 @@ KEY							VALUE
 PAT-GithubPrivateRepo		<xxxxxxxxx>
 ```
 
-3. Provision a logic app in your Azure subscription
+3. **Provision a logic app in your Azure subscription**
 https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow
 
 	a. The Logic Apps Designer opens and shows a page with an introduction video and commonly used triggers. Close this intro page (Click 'X' on the top right).
