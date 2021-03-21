@@ -1,0 +1,90 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Get_secret": {
+                "inputs": {
+                    "host": {
+                        "connection": {
+                            "name": "@parameters('$connections')['keyvault']['connectionId']"
+                        }
+                    },
+                    "method": "get",
+                    "path": "/secrets/@{encodeURIComponent('PAT-GithubPrivateRepo')}/value"
+                },
+                "runAfter": {},
+                "type": "ApiConnection"
+            },
+            "HTTP": {
+                "inputs": {
+                    "headers": {
+                        "Accept": "application/vnd.github.v3.raw",
+                        "Authorization": "Bearer @{body('Get_secret')?['value']}"
+                    },
+                    "method": "GET",
+                    "uri": "@{triggerOutputs()['queries']['url']}"
+                },
+                "runAfter": {
+                    "Get_secret": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Http"
+            },
+            "Response": {
+                "inputs": {
+                    "body": "@body('HTTP')",
+                    "statusCode": 200
+                },
+                "kind": "Http",
+                "runAfter": {
+                    "HTTP": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Response"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "parameters": {
+            "$connections": {
+                "defaultValue": {},
+                "type": "Object"
+            }
+        },
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "method": "GET",
+                    "schema": {
+                        "properties": {
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "parameters": {
+        "$connections": {
+            "value": {
+                "keyvault": {
+                    "connectionId": "/subscriptions/<subscriptionId>/resourceGroups/<resourceGroup>/providers/Microsoft.Web/connections/keyvault",
+                    "connectionName": "keyvault",
+                    "connectionProperties": {
+                        "authentication": {
+                            "type": "ManagedServiceIdentity"
+                        }
+                    },
+                    "id": "/subscriptions/<subscriptionId>/providers/Microsoft.Web/locations/<region>/managedApis/keyvault"
+                }
+            }
+        }
+    }
+}
