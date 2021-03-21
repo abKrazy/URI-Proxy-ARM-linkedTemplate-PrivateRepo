@@ -24,7 +24,15 @@ Note:
 <AzureFunctionsVersion>v3</AzureFunctionsVersion>
 ```
 
-3. **Test with your ARM linked template located in a private GitHub repo**
+3. **IMPORTANT**
+
+Set CORS policy (Function app blade in portal -> CORS under the API section)
+Allowed Origins: *
+
+This will allow the function API to be called from the browser in cross-origin request scenarios (e.g. Deploy to Azure button invoking the function URI from the porta.azure.com domain)
+
+
+4. **Test with your ARM linked template located in a private GitHub repo**
 
 
 url format:
