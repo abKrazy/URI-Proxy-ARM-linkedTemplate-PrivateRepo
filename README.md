@@ -50,7 +50,7 @@ As a result, ARM templates cannot reference artifacts located in a private GitHu
 ## Solution:
 **Azure Functions to the rescue!**
 
-A Function App can act as a proxy that accepts (as query parms) the uri for a linked tempate located in a private repo and the PAT token, and authenticates to GitHub retrieivng the template json (i.e. function uri becomes the artifact location for ARM)
+A Function App can act as a proxy that accepts (as query parms) the uri for a linked tempate located in a private repo and the PAT token, and authenticates to GitHub retrieiving the template json (i.e. function uri becomes the artifact location for ARM)
 
 ```
 High-level flow:
