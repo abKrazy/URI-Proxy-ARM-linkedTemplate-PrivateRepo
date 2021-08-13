@@ -5,7 +5,7 @@ The storage account definition is stored in its own template (*linkedStorageAcco
 
 # Instructions:
 
-1. Store the 2 ARM templates in a private GitHub repository...
+1. Store the 2 ARM templates in a private GitHub repository.
 2. Create a GitHub PAT (Personal Access Token)
 https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 3. In *azuredeploy.json*, replace the following placeholders (<>):
